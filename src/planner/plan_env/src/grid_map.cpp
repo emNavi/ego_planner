@@ -734,7 +734,7 @@ void GridMap::raycastProcess()
     t4 = ros::Time::now();
 
     cout << setprecision(7);
-    cout << "t2=" << (t2 - t1).toSec() << " t3=" << (t3 - t2).toSec() << " t4=" << (t4 - t3).toSec() << endl;
+    // cout << "t2=" << (t2 - t1).toSec() << " t3=" << (t3 - t2).toSec() << " t4=" << (t4 - t3).toSec() << endl;
     ;
 
     // md_.fuse_time_ += (t2 - t1).toSec();
