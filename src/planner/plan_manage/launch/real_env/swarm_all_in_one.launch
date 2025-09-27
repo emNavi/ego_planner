@@ -8,10 +8,15 @@
     <!-- 2: use global waypoints below  -->
     <!-- 4: use REMOTE_TARGET  -->
     <!-- 5: use REMOTE_START  -->
-    <arg name="flight_type" default="4" />
+    <arg name="flight_type" default="2" />
 
-  <include file="$(find global_interface)/config/ego_planner_swarm_v1/param.xml">
+    <arg name="max_vel" default="0.5"/>
+    <arg name="max_acc" default="0.5"/>
+
+  <include file="$(find global_interface)/config/ego_plan/param.xml">
     <arg name="drone_id" value="$(arg drone_id)"/>
+    <arg name="max_vel" value="$(arg max_vel)"/>
+    <arg name="max_acc" value="$(arg max_acc)"/>
     <arg name="odometry_topic" value="$(arg odom_topic)"/>
     <!-- camera pose: transform of camera frame in the world frame -->
     <!-- depth topic: depth image, 640x480 by default -->
